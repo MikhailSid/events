@@ -1,0 +1,44 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Добавление мероприятия{% endblock %}
+
+{% block content %}
+<!-- Выбор даты и времени с помощью flatpickr -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        flatpickr("#id_date_start", {
+            enableTime: true,
+            dateFormat: "Y-m-d H:i",
+            time_24hr: true,
+            locale: 'ru'
+        });
+
+        flatpickr("#id_date_end", {
+            enableTime: true,
+            dateFormat: "Y-m-d H:i",
+            time_24hr: true,
+            locale: 'ru'
+        });
+    });
+</script>
+<div style="text-align: center; margin: 3%;">
+    <h3 style="margin: 3%;">Добавление мероприятия</h3>
+    <form method="POST" action="add_event">
+        {% csrf_token %}
+        {{ form.non_field_errors }}
+        {{ form.place }}<br>
+        {{ form.name }}<br>
+        {{ form.description }}<br>
+        <div class="input-group date" id="id_date_start">
+            {{ form.date_start }}
+            <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+        </div><br>
+        <div class="input-group date" id="id_date_end">
+            {{ form.date_end }}
+            <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+        </div>
+        <button type="submit" class="btn btn-primary" style="margin: 3%;">Сохранить</button>
+        <a class="btn btn-secondary" href="{% url 'events' %}" style="margin: 3%;">Отмена</a>
+    </form>
+</div>
+{% endblock %}

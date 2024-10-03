@@ -1,0 +1,17 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Добавление места{% endblock %}
+
+{% block content %}
+<div style="text-align: center; margin: 3%;">
+    <h3 style="margin: 3%;">Добавление локации</h3>
+    <form method="POST" action="add_place">
+        {% csrf_token %}
+        {{ form.location }}<br>
+        {{ form.name }}<br>
+        {{ form.description }}<br>
+        <button type="submit" class="btn btn-primary" style="margin: 3%;">Сохранить</button>
+        <a class="btn btn-secondary" href="{% url 'places' %}" style="margin: 3%;">Отмена</a>
+    </form>
+</div>
+{% endblock %}

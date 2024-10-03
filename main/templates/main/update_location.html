@@ -1,0 +1,15 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Изменение локации{% endblock %}
+
+{% block content %}
+<div style="text-align: center; margin: 3%;">
+    <h3 style="margin: 3%;">Изменение локации "{{ object }}"</h3>
+    <form method="POST" style="margin: 3%;">
+        {% csrf_token %}
+        {{ form.name }}
+        <button type="submit" class="btn btn-primary" style="margin: 3%;">Сохранить</button>
+        <a class="btn btn-secondary" href="{% url 'locations' %}" style="margin: 3%;">Отмена</a>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,144 @@
+[
+    {
+        "model": "main.Location",
+        "pk": 1,
+        "fields": {
+            "name": "Центр города"
+        }
+    },
+    {
+        "model": "main.Location",
+        "pk": 2,
+        "fields": {
+            "name": "Пляж"
+        }
+    },
+    {
+        "model": "main.Place",
+        "pk": 1,
+        "fields": {
+            "location": 1,
+            "name": "Площадь",
+            "description": "Красивая площадь"
+        }
+    },
+    {
+        "model": "main.Place",
+        "pk": 2,
+        "fields": {
+            "location": 2,
+            "name": "Прибрежная зона",
+            "description": "Прибрежная зона городского пляжа"
+        }
+    },
+    {
+        "model": "main.Event",
+        "pk": 1,
+        "fields": {
+            "place": 1,
+            "name": "Парад работников труда",
+            "description": "Описание",
+            "date_start": "2023-10-01T9:00:00",
+            "date_end": "2023-10-01T10:00:00"
+        }
+    },
+    {
+        "model": "main.Event",
+        "pk": 2,
+        "fields": {
+            "place": 1,
+            "name": "Ярмарка хозяйственных товаров",
+            "description": "Описание",
+            "date_start": "2023-10-01T10:30:00",
+            "date_end": "2023-10-01T11:30:00"
+        }
+    },
+    {
+        "model": "main.Event",
+        "pk": 3,
+        "fields": {
+            "place": 1,
+            "name": "Ярмарка товаров для школы",
+            "description": "Описание",
+            "date_start": "2023-10-01T12:00:00",
+            "date_end": "2023-10-01T13:00:00"
+        }
+    },
+    {
+        "model": "main.Event",
+        "pk": 4,
+        "fields": {
+            "place": 1,
+            "name": "Праздничный концерт",
+            "description": "Описание",
+            "date_start": "2023-10-01T14:00:00",
+            "date_end": "2023-10-01T18:00:00"
+        }
+    },
+    {
+        "model": "main.Event",
+        "pk": 5,
+        "fields": {
+            "place": 1,
+            "name": "Салют",
+            "description": "Описание",
+            "date_start": "2023-10-01T19:00:00",
+            "date_end": "2023-10-01T20:00:00"
+        }
+    },
+    {
+        "model": "main.Event",
+        "pk": 6,
+        "fields": {
+            "place": 2,
+            "name": "Чемпионат по пляжному волейболу",
+            "description": "Описание",
+            "date_start": "2023-10-01T10:00:00",
+            "date_end": "2023-10-01T12:30:00"
+        }
+    },
+    {
+        "model": "main.Event",
+        "pk": 7,
+        "fields": {
+            "place": 2,
+            "name": "Заплыв на 100 метров",
+            "description": "Описание",
+            "date_start": "2023-10-01T13:00:00",
+            "date_end": "2023-10-01T14:00:00"
+        }
+    },
+    {
+        "model": "main.Event",
+        "pk": 8,
+        "fields": {
+            "place": 2,
+            "name": "Чемпионат по строительству песочных замков",
+            "description": "Описание",
+            "date_start": "2023-10-01T15:00:00",
+            "date_end": "2023-10-01T16:00:00"
+        }
+    },
+    {
+        "model": "main.Event",
+        "pk": 9,
+        "fields": {
+            "place": 2,
+            "name": "Конкурс пейзажей моря",
+            "description": "Описание",
+            "date_start": "2023-10-01T16:30:00",
+            "date_end": "2023-10-01T18:30:00"
+        }
+    },
+    {
+        "model": "main.Event",
+        "pk": 10,
+        "fields": {
+            "place": 2,
+            "name": "Танцы",
+            "description": "Описание",
+            "date_start": "2023-10-01T19:00:00",
+            "date_end": "2023-10-01T21:30:00"
+        }
+    }
+]

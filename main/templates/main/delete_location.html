@@ -1,0 +1,14 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Удаление локации{% endblock %}
+
+{% block content %}
+<div style="text-align: center; margin: 3%;">
+    <h3 style="margin: 3%;">Вы действительно хотите удалить локацию "{{ object }}"?</h3>
+    <form method="POST" style="margin: 3%;">
+        {% csrf_token %}
+        <a class="btn btn-secondary" href="{% url 'locations' %}" style="margin: 3%;">Отмена</a>
+        <button type="submit" class="btn btn-danger" style="margin: 3%;">Удалить</button>
+    </form>
+</div>
+{% endblock %}

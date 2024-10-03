@@ -1,0 +1,14 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Профиль{% endblock %}
+
+{% block content %}
+<div class="container text-center" style="margin: 5% auto;">
+    <h3>Информация о пользователе</h3>
+    <p>Имя пользователя: {{ user.username }}</p>
+    <p>Почта: {{ user.email }}</p>
+    <p>Фамилия: {{ user.last_name }}</p>
+    <p>Имя: {{ user.first_name }}</p>
+    <a href="{% url 'logout' %}">Выйти</a>
+</div>
+{% endblock %}

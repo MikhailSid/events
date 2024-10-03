@@ -1,0 +1,29 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Вход{% endblock %}
+
+{% block content %}
+<div class="container" style="margin: 5% auto;">
+<form method="post">
+    <div class="text-center" style="margin: 3%">
+        <h3>Вход</h3>
+    </div>
+    <form action="{% url 'login' %}" method="post">
+        {% csrf_token %}
+        <p style="color: red; text-align: center;">{{ message }}</p>
+        <div class="form-floating">
+            <input type="text" name="username" class="form-control" id="floatingName" placeholder="name">
+            <label for="floatingName">Имя пользователя</label>
+        </div>
+        <br>
+        <div class="form-floating">
+            <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password">
+            <label for="floating Password">Пароль</label>
+        </div>
+    <div class="text-center" style="margin: 3%">
+        <button type="submit" class="btn btn-primary">Войти</button><br>
+        <a class="link" href="{% url 'register' %}">Регистрация</a>
+    </div>
+</form>
+</div>
+{% endblock %}
